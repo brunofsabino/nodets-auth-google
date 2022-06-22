@@ -14,7 +14,7 @@ const server = express();
 // const sessionCookie = cookieSession()
 
 server.use(session({
-    secret: 'keyboard cat',
+    secret: process.env.SESSION_SECRETY as string,
     resave: false,
     saveUninitialized: true,
     // cookie: { secure: true }
